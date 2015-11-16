@@ -61,7 +61,15 @@ data <- cbind(subject_ids,activity_ids,data)
 
 #step 4: label data set with descriptive variable names
 labels <- append(c("subject_id","activity"),labels)
+#make the labels easier to read
 labels <- gsub("BodyBody","Body",labels, fixed = TRUE)
+labels <- gsub("()","",labels, fixed = TRUE)
+labels <- gsub("tBody","body",labels, fixed = TRUE)
+labels <- gsub("tGravity","gravity",labels, fixed = TRUE)
+labels <- gsub("fBody","fFourierT_",labels, fixed = TRUE)
+labels <- gsub("bodyGyro","gyro",labels, fixed = TRUE)
+labels <- gsub("Mag","Magnt",labels, fixed = TRUE)
+#assign labels to data
 colnames(data) <- labels
 
 #step 5: create new tidy dataset with average of each variable 
