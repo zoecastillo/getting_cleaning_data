@@ -18,7 +18,8 @@ The script runs automatically upon calling source("run_analysis.R").
    All measurements and the corresponding labels that are not needed are omitted from the working data set</li>
 <li>The activity id values are replaced with the appropriate string labels</li>
 <li>The subject ids and activity labels are added to the working dataset</li>
-<li>The working dataset is labeled with descriptive variable names taken from the feature list</li>
+<li>The working dataset is labeled with descriptive variable names taken from the feature list.<br />
+ The strings are edited to be more easily readable for humans.</li>
 <li>The working dataset is grouped by subject ids and activities and the average for each measurement is<br/>
    calculated per group. The result is stored in a variable called tidyoutput</li></ol>
 
