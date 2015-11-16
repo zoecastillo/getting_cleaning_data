@@ -1,6 +1,6 @@
 ## Getting and Cleaning Data Course Project
 
-The run_analysis.R script is designed to run within the UCI HAR Dataset folder. It expects the input files either within the same directory (features, activity_labels) or in subfolders called test and train. 
+The run_analysis.R script is designed to run within the UCI HAR Dataset folder. It expects the input files within the same directory (features, activity_labels) and in subfolders called test and train. 
 The script uses the dplyr package which must be installed prior to running the script. 
 The script runs automatically upon calling source("run_analysis.R").
 
