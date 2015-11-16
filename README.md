@@ -21,3 +21,8 @@ The script runs automatically upon calling source("run_analysis.R").
 <li>The working dataset is labeled with descriptive variable names taken from the feature list</li>
 <li>The working dataset is grouped by subject ids and activities and the average for each measurement is<br/>
    calculated per group. The result is stored in a variable called tidyoutput</li></ol>
+
+The resulting dataset fulfills the requirements of tidy data:
+<ul><li>Each variable is in its own column: Variables are the subject, the activity and the different mean/std values.</li>
+<li>Each observation of the variables is in a different row: Every row holds the mean values for each measurement for each unique combination of each subject doing each activity</li>
+<li>Each type of observational unit forms a table</li></ul>
