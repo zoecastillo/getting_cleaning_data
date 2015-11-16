@@ -9,7 +9,8 @@ Notes: 	XYZ is used to abbreviate 3 separate variables for each of the three dir
 	std refers to standard variation 
 	fFourierT refers to Fast Fourier Transformation
 	Magnt regers to Magnitude
-	All signals are time domain signals
+	All signals are time domain signals:
+	Accleration is (usually) measured in meters per second and the gyrometer measures degrees per second.
 
 subject_id : 			Integer value uniquely identifying a study participant   
 					range: 1 - 30   
