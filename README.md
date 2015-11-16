@@ -14,7 +14,7 @@ The script runs automatically upon calling source("run_analysis.R").
         <li>train/X_train.txt</li>
         <li>test/X_test.txt</li></ul></li>
 <li>The test and train data is merged for the different elements (activities, subjects and the measurements)</li>
-<li>Only the required columns are filtered out via the elements found in the features list<br/>
+<li>Only the required columns (mean and std values) are filtered out via the elements found in the features list<br/>
    All measurements and the corresponding labels that are not needed are omitted from the working data set</li>
 <li>The activity id values are replaced with the appropriate string labels</li>
 <li>The subject ids and activity labels are added to the working dataset</li>
