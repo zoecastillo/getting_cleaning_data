@@ -6,9 +6,9 @@ To obtain the desired mean values for each measurement, the dataset was grouped 
 
 CODE BOOK
 Notes: 	XYZ is used to abbreviate 3 separate variables for each of the three directions
-		std refers to standard variation 
-		FFT refers to Fast Fourier Transformation
-		All signals are time domain signals (as indicated by the prefix t)
+	std refers to standard variation 
+	FFT refers to Fast Fourier Transformation
+	All signals are time domain signals (as indicated by the prefix t)
 
 subject_id : 			Integer value uniquely identifying a study participant   
 						range: 1 - 30           
@@ -29,7 +29,7 @@ tBodyGyro-mean()-XYZ :   	mean value of the gyroscope signals in X, Y, and Z dir
 tBodyGyro-std()-XYZ :   	std value of the gyroscope signals in X, Y, and Z direction
 tBodyGyroJerk-mean()-XYZ :	mean value of the Jerk signals of tBodyGyro in X, Y, and Z direction
 tBodyGyroJerk-std()-XYZ :	std value of the Jerk signals of tBodyGyro in X, Y, and Z direction
-tBodyAccMag-mean() :   	mean magnitude of the three-dimensional signals for tBodyAcc (calculated using the Euclidean norm) 
+tBodyAccMag-mean() :   		mean magnitude of the three-dimensional signals for tBodyAcc (calculated using the Euclidean norm) 
 tBodyAccMag-std() :     	std magnitude of the three-dimensional signals for tBodyAcc (calculated using the Euclidean norm) 
 tGravityAccMag-mean() :  	mean magnitude of the three-dimensional signals for tGravityAcc (calculated using the Euclidean norm) 
 tGravityAccMag-std() :  	std magnitude of the three-dimensional signals for tGravityAcc (calculated using the Euclidean norm) 
@@ -49,7 +49,7 @@ fBodyAccMag-mean() :     	mean value of FFT applied on tBodyAccMag
 fBodyAccMag-std() :     	std value of FFT applied on tBodyAccMag
 fBodyAccJerkMag-mean() :	mean value of FFT applied on tBodyAccJerkMag
 fBodyAccJerkMag-std() : 	std value of FFT applied on tBodyAccJerkMag
-fBodyGyroMag-mean() :  	mean value of FFT applied on tBodyGyroMag
-fBodyGyroMag-std() :   	std value of FFT applied on tBodyGyroMag
+fBodyGyroMag-mean() :  		mean value of FFT applied on tBodyGyroMag
+fBodyGyroMag-std() :   		std value of FFT applied on tBodyGyroMag
 fBodyGyroJerkMag-mean() :	mean value of FFT applied on tBodyGyroJerkMag
 fBodyGyroJerkMag-std() :	std value of FFT applied on tBodyGyroJerkMag
