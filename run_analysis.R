@@ -62,7 +62,7 @@ data <- cbind(subject_ids,activity_ids,data)
 #step 4: label data set with descriptive variable names
 #add labels for subject and activity variables
 labels <- append(c("subjectid","activity"),labels)
-#make the labels easier to read
+#make the labels easier to read and better to work with
 labels <- gsub("BodyBody","Body",labels, fixed = TRUE)
 labels <- gsub("()","",labels, fixed = TRUE)
 labels <- gsub("tBody","body",labels, fixed = TRUE)
