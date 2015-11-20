@@ -1,20 +1,20 @@
 STUDY DESIGN
 
 Details of the original study design can be found in the README.txt file which is part of the data package. The data contains measurements obtained from a smartphones's embedded accelerometer and gyroscope that was manually matched to specific types of activities performed by a set of 30 candidates in total. The data is spread out across a test and train set which was merged for the analysis.
-The original dataset contained 561 different measurements (the X_test/train.txt) which were reduced in the analysis to only those containing the estimated mean and std values. The meanFreq values were omitted for the analysis as they are not based on the raw measurements of tAcc-XYZ (accelerometer) and tGyro-XYZ (gyroscope). This leads to a set of 66 measurements to which the corresponding activity ids (y_test/train.txt) and subject ids (subject_test/train.txt) were added resulting in a dataset with 10299 observations and 68 variables (working dataset). The activity ids were replaced with human readable strings obtained via the activity_labels.txt annotation and the variables were labeled based on the names provided in features.txt. Those names are concise, yet human-readable identifiers for the measurement categories, so only limited changes were made to them to make them easier to understand. See below for details.
+The original dataset contained 561 different measurements (the Xtest/train.txt) which were reduced in the analysis to only those containing the estimated mean and std values. The meanFreq values were omitted for the analysis as they are not based on the raw measurements of tAccxyz (accelerometer) and tGyroxyz (gyroscope). This leads to a set of 66 measurements to which the corresponding activity ids (ytest/train.txt) and subject ids (subjecttest/train.txt) were added resulting in a dataset with 10299 observations and 68 variables (working dataset). The activity ids were replaced with human readable strings obtained via the activitylabels.txt annotation and the variables were labeled based on the names provided in features.txt. Those names are concise, yet humanreadable identifiers for the measurement categories, so only limited changes were made to them to make them easier to understand and better to work with. See below for details.
 
 The goal of this study was to obtain the desired mean values for each measurement for each subject and each activity. The reduced dataset (as explained above) was grouped by subject id and activity. Then, the mean value was calculated for each measurement by those groups and the result stored as a new (tidy) dataset. This data set contains 180 observations (each a unique pair of subject and activity) and the calculated mean values for the 66 measurements of the working data set.
 
 CODE BOOK
 
-Notes: 	XYZ is used to abbreviate 3 separate variables for each of the three dimensions
+Notes: 	xyz is used to abbreviate 3 separate variables for each of the three dimensions
 	std refers to standard variation 
-	fFourierT & FFT refers to Fast Fourier Transformation
-	Magnt regers to Magnitude
+	fftrefers to Fast Fourier Transformation
+	magnt regers to Magnitude
 	All signals are time domain signals:
-	Accleration is generally measured in meters per second and the gyrometer measures degrees per second. 
+	Accleration (acc) is generally measured in meters per second and the gyrometer (gyro) measures degrees per second. 
 
-subject_id : 			Integer value uniquely identifying a study participant   
+subjectid : 			Integer value uniquely identifying a study participant   
 					range: 1 - 30   
         
 activity : 			Label identifying the activity. Possible values are
@@ -25,37 +25,37 @@ activity : 			Label identifying the activity. Possible values are
 					WALKING_UPSTAIRS
 					WALKING_DOWNSTAIRS
 								               
-bodyAcc-mean-XYZ :     		mean value of the body acceleration signals in X, Y, and Z dimension 
-bodyAcc-std-XYZ :    		std value of the body accelerations signals in X, Y, and Z dimension
-gravityAcc-mean-XYZ : 		mean value of the gravity acceleration signals in X, Y, and Z dimension
-gravityAcc-std-XYZ :  		std value of the gravity acceleration signals in X, Y, and Z dimension
-bodyAccJerk-mean-XYZ :		mean value of the Jerk signals of bodyAcc in X, Y, and Z dimension
-bodyAccJerk-std-XYZ : 		std value of the Jerk signals of bodyAcc in X, Y, and Z dimension
-gyro-mean-XYZ :   		mean value of the gyroscope signals in X, Y, and Z dimension
-gyro-std-XYZ :   		std value of the gyroscope signals in X, Y, and Z dimension
-gyroJerk-mean-XYZ :		mean value of the Jerk signals of gyro in X, Y, and Z dimension
-gyroJerk-std-XYZ :		std value of the Jerk signals of gyro in X, Y, and Z dimension
-bodyAccMagnt-mean :   		mean Magnitude of the three-dimensional signals for bodyAcc (calculated using the Euclidean norm) 
-bodyAccMagnt-std :     		std Magnitude of the three-dimensional signals for bodyAcc (calculated using the Euclidean norm) 
-gravityAccMagnt-mean :  	mean Magnitude of the three-dimensional signals for gravityAcc (calculated using the Euclidean norm) 
-gravityAccMagnt-std :  		std Magnitude of the three-dimensional signals for gravityAcc (calculated using the Euclidean norm) 
-bodyAccJerkMagnt-mean : 	mean Magnitude of the three-dimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
-bodyAccJerkMagnt-std :  	std Magnitude of the three-dimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
-gyroMagnt-mean :   		mean Magnitude of the three-dimensional signals for gyro (calculated using the Euclidean norm)
-gyroMagnt-std :     		std Magnitude of the three-dimensional signals for gyro (calculated using the Euclidean norm) 
-gyroJerkMagnt-mean :		mean Magnitude of the three-dimensional signals for gyroJerk (calculated using the Euclidean norm) 
-gyroJerkMagnt-std :		std Magnitude of the three-dimensional signals for gyroJerk (calculated using the Euclidean norm) 
-fFourierT_Acc-mean-XYZ :     	mean value of FFT applied on bodyAcc signals
-fFourierT_Acc-std-XYZ :      	std value of FFT applied on bodyAcc signals
-fFourierT_AccJerk-mean-XYZ : 	mean value of FFT applied on bodyAccJerk signals
-fFourierT_AccJerk-std-XYZ :  	std value of FFT applied on bodyAccJerk signals
-fFourierT_Gyro-mean-XYZ :    	mean value of FFT applied on gyro signals
-fFourierT_Gyro-std-XYZ :    	std value of FFT applied on gyro signals
-fFourierT_AccMagnt-mean :     	mean value of FFT applied on bodyAccMagnt
-fFourierT_AccMagnt-std :     	std value of FFT applied on bodyAccMagnt
-fFourierT_AccJerkMagnt-mean :	mean value of FFT applied on bodyAccJerkMagnt
-fFourierT_AccJerkMagnt-std : 	std value of FFT applied on bodyAccJerkMagnt
-fFourierT_GyroMagnt-mean :  	mean value of FFT applied on gyroMagnt
-fFourierT_GyroMagnt-std :   	std value of FFT applied on gyroMagnt
-fFourierT_GyroJerkMagnt-mean :	mean value of FFT applied on gyroJerkMagnt
-fFourierT_GyroJerkMagnt-std :	std value of FFT applied on gyroJerkMagnt
+bodyaccmeanxyz :     		mean value of the body acceleration signals in X, Y, and Z dimension 
+bodyaccstdxyz :    		std value of the body accelerations signals in X, Y, and Z dimension
+gravityaccmeanxyz : 		mean value of the gravity acceleration signals in X, Y, and Z dimension
+gravityaccstdxyz :  		std value of the gravity acceleration signals in X, Y, and Z dimension
+bodyaccjerkmeanxyz :		mean value of the Jerk signals of bodyAcc in X, Y, and Z dimension
+bodyaccjerkstdxyz : 		std value of the Jerk signals of bodyAcc in X, Y, and Z dimension
+gyromeanxyz :   		mean value of the gyroscope signals in X, Y, and Z dimension
+gyrostdxyz :   		std value of the gyroscope signals in X, Y, and Z dimension
+gyrojerkmeanxyz :		mean value of the Jerk signals of gyro in X, Y, and Z dimension
+gyrojerkstdxyz :		std value of the Jerk signals of gyro in X, Y, and Z dimension
+bodyaccmagntmean :   		mean Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
+bodyaccmagntstd :     		std Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
+gravityaccmagntmean :  	mean Magnitude of the threedimensional signals for gravityAcc (calculated using the Euclidean norm) 
+gravityaccmagntstd :  		std Magnitude of the threedimensional signals for gravityAcc (calculated using the Euclidean norm) 
+bodyaccjerkmagntmean : 	mean Magnitude of the threedimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
+bodyaccjerkmagntstd :  	std Magnitude of the threedimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
+gyromagntmean :   		mean Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm)
+gyromagntstd :     		std Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm) 
+gyrojerkmagntmean :		mean Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
+gyrojerkmagntstd :		std Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
+fftaccmeanxyz :     	mean value of FFT applied on bodyAcc signals
+fftaccstdxyz :      	std value of FFT applied on bodyAcc signals
+fftaccjerkmeanxyz : 	mean value of FFT applied on bodyAccJerk signals
+fftaccjerkstdxyz :  	std value of FFT applied on bodyAccJerk signals
+fftgyromeanxyz :    	mean value of FFT applied on gyro signals
+fftgyrostdxyz :    	std value of FFT applied on gyro signals
+fftaccmagntmean :     	mean value of FFT applied on bodyAccMagnt
+fftaccmagntstd :     	std value of FFT applied on bodyAccMagnt
+fftaccjerkmagntmean :	mean value of FFT applied on bodyAccJerkMagnt
+fftaccjerkmagntstd : 	std value of FFT applied on bodyAccJerkMagnt
+fftgyromagntmean :  	mean value of FFT applied on gyroMagnt
+fftgyromagntstd :   	std value of FFT applied on gyroMagnt
+fftgyrojerkmagntmean :	mean value of FFT applied on gyroJerkMagnt
+fftgyrojerkmagntstd :	std value of FFT applied on gyroJerkMagnt
