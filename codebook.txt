@@ -14,37 +14,37 @@ Notes: 	xyz is used to abbreviate 3 separate variables for each of the three dim
 	All signals are time domain signals:
 	Accleration (acc) is generally measured in meters per second and the gyrometer (gyro) measures degrees per second. 
 
-subjectid : 			Integer value uniquely identifying a study participant   
+subjectid : 		Integer value uniquely identifying a study participant   
 					range: 1 - 30   
         
-activity : 			Label identifying the activity. Possible values are
-					LAYING
-					SITTING
-					STANDING
-					WALKING
-					WALKING_UPSTAIRS
-					WALKING_DOWNSTAIRS
+activity : 		Label identifying the activity. Possible values are
+				LAYING
+				SITTING
+				STANDING
+				WALKING
+				WALKING_UPSTAIRS
+				WALKING_DOWNSTAIRS
 								               
-bodyaccmeanxyz :     		mean value of the body acceleration signals in X, Y, and Z dimension 
-bodyaccstdxyz :    		std value of the body accelerations signals in X, Y, and Z dimension
-gravityaccmeanxyz : 		mean value of the gravity acceleration signals in X, Y, and Z dimension
-gravityaccstdxyz :  		std value of the gravity acceleration signals in X, Y, and Z dimension
-bodyaccjerkmeanxyz :		mean value of the Jerk signals of bodyAcc in X, Y, and Z dimension
-bodyaccjerkstdxyz : 		std value of the Jerk signals of bodyAcc in X, Y, and Z dimension
-gyromeanxyz :   		mean value of the gyroscope signals in X, Y, and Z dimension
+bodyaccmeanxyz :     	mean value of the body acceleration signals in X, Y, and Z dimension 
+bodyaccstdxyz :    	std value of the body accelerations signals in X, Y, and Z dimension
+gravityaccmeanxyz : 	mean value of the gravity acceleration signals in X, Y, and Z dimension
+gravityaccstdxyz :  	std value of the gravity acceleration signals in X, Y, and Z dimension
+bodyaccjerkmeanxyz :	mean value of the Jerk signals of bodyAcc in X, Y, and Z dimension
+bodyaccjerkstdxyz : 	std value of the Jerk signals of bodyAcc in X, Y, and Z dimension
+gyromeanxyz :   	mean value of the gyroscope signals in X, Y, and Z dimension
 gyrostdxyz :   		std value of the gyroscope signals in X, Y, and Z dimension
-gyrojerkmeanxyz :		mean value of the Jerk signals of gyro in X, Y, and Z dimension
-gyrojerkstdxyz :		std value of the Jerk signals of gyro in X, Y, and Z dimension
-bodyaccmagntmean :   		mean Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
-bodyaccmagntstd :     		std Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
+gyrojerkmeanxyz :	mean value of the Jerk signals of gyro in X, Y, and Z dimension
+gyrojerkstdxyz :	std value of the Jerk signals of gyro in X, Y, and Z dimension
+bodyaccmagntmean :   	mean Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
+bodyaccmagntstd :     	std Magnitude of the threedimensional signals for bodyAcc (calculated using the Euclidean norm) 
 gravityaccmagntmean :  	mean Magnitude of the threedimensional signals for gravityAcc (calculated using the Euclidean norm) 
-gravityaccmagntstd :  		std Magnitude of the threedimensional signals for gravityAcc (calculated using the Euclidean norm) 
+gravityaccmagntstd :  	std Magnitude of the threedimensional signals for gravityAcc (calculated using the Euclidean norm) 
 bodyaccjerkmagntmean : 	mean Magnitude of the threedimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
 bodyaccjerkmagntstd :  	std Magnitude of the threedimensional signals for bodyAccJerk (calculated using the Euclidean norm) 
-gyromagntmean :   		mean Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm)
-gyromagntstd :     		std Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm) 
-gyrojerkmagntmean :		mean Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
-gyrojerkmagntstd :		std Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
+gyromagntmean :   	mean Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm)
+gyromagntstd :     	std Magnitude of the threedimensional signals for gyro (calculated using the Euclidean norm) 
+gyrojerkmagntmean :	mean Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
+gyrojerkmagntstd :	std Magnitude of the threedimensional signals for gyroJerk (calculated using the Euclidean norm) 
 fftaccmeanxyz :     	mean value of FFT applied on bodyAcc signals
 fftaccstdxyz :      	std value of FFT applied on bodyAcc signals
 fftaccjerkmeanxyz : 	mean value of FFT applied on bodyAccJerk signals
